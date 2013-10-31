@@ -1,0 +1,43 @@
+\documentclass[paper=a4,fontsize=11pt]{xetexpNote}
+
+\lhead{}
+\rhead{}
+\lfoot{}
+\rfoot{~\thepage~}
+\usepackage[round, comma]{natbib}
+
+\begin{document}
+\NoteTitleName{Online Object Tracking: A Benchmark}\sepspace
+\MyBrief{{\Huge 本}文总结了这篇文章中关于Related Work部分的归类总结，以便以后参考。Object Tracking任务主要包括3个子任务：Target Representation Scheme (或Appearance Model)、Search Scheme、Model Update，下面就分别从这三个方面来总结各自的研究成果。}
+\sepspace
+
+
+%\MyPartb{\HandRight\ \ Brief}{}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+	\item 首先Linear Model的含义是模型对于未知参数是线性的，而不要求对input是否线性，事实上为了通常input都是经过非线性处理的。未知参数的线性形式为分析提供了方便，当然同时也一定程度上限定了模型的能力。最简单的一个线性模型就是Linear Regression，它对于input和未知参数都是线性的。
+    \item \textbf{Linear Model}：
+    
+    \qquad 给定一个含有$N$个数据的训练数据集$\{\mathbf{x}_n\}$（其中$n=1,...,N$），同时给定了训练数据的标签值$\{t_n\}$。
+    
+    \checkmark 问题定义\[ y(\mathbf{x}, \mathbf{w}) =    \
+                                                w_0 + \sum_{j=1}^{M-1} w_j \phi_j(\mathbf{x}) = \
+                                                \sum_{j=0}^{M-1} w_j \phi_j(\mathbf{x}) = \                                                
+                                                \mathbf{w}^T \phi(\mathbf{x}) \]
+    \qquad 其中M定义了模型的尺寸或者复杂度；$\phi_j(\mathbf{x}$称为\emph{basis functions}，一般是非线性的，可以看作是原始input的一种变换或者特征提取。
+    \qquad 还有一些常用的basis functions有：
+    \[
+    Gaussian Basis Function: \phi_j(\mathbf{x}) = \exp\{ -\frac{(x-\mu_j)^2}{2s^2} \} \\
+    
+    \]
+    
+    \qquad Linear Regression中basis function选择的就是$\phi_j(\mathbf{x}) = x_j$；Polynomial Regression中选择的是$\phi_j(\mathbf{x}) = x^j$。
+    
+    \checkmark 
+    
+    
+\end{compactitem}
+
+
+%\bibliographystyle{abbrvnat} % compatible with the package: Natbib, other choices: plainnat / unsrtnat
+%\bibliography{refs}
+\end{document} 
