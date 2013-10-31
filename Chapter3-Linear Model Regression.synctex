@@ -1,6 +1,6 @@
 SyncTeX Version:1
-Input:1:F:/zProgram/[L]博士工作/PRMLReadingNote/./Chapter3-Linear Model Regression.tex
-Input:2:F:/zProgram/[L]博士工作/PRMLReadingNote/./xetexpNote.cls
+Input:1:F:/zProgram/PRMLReadingNote/./Chapter3-Linear Model Regression.tex
+Input:2:F:/zProgram/PRMLReadingNote/./xetexpNote.cls
 Input:3:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Input:4:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/latex/koma-script/scrkbase.sty
 Input:5:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/latex/koma-script/scrbase.sty
@@ -91,12 +91,12 @@ Input:89:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/latex/to
 Input:90:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/xelatex/xecjk/config/xeCJK.cfg
 Input:91:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/latex/sectsty/sectsty.sty
 Input:92:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/latex/natbib/natbib.sty
-Input:93:F:/zProgram/[L]博士工作/PRMLReadingNote/./Chapter3-Linear Model Regression.aux
+Input:93:F:/zProgram/PRMLReadingNote/./Chapter3-Linear Model Regression.aux
 Input:94:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/latex/tipa/t3cmr.fd
 Input:95:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Input:96:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Input:97:F:/zProgram/[L]博士工作/PRMLReadingNote/./Chapter3-Linear Model Regression.out
-Input:98:F:/zProgram/[L]博士工作/PRMLReadingNote/./Chapter3-Linear Model Regression.out
+Input:97:F:/zProgram/PRMLReadingNote/./Chapter3-Linear Model Regression.out
+Input:98:F:/zProgram/PRMLReadingNote/./Chapter3-Linear Model Regression.out
 Input:99:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/latex/psnfss/ot1phv.fd
 Input:100:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 Input:101:e:/zProgramFiles/zSoftware/Install/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -107,7 +107,7 @@ Unit:1
 X Offset:0
 Y Offset:0
 Content:
-!10168
+!10108
 {1
 [1,55:4736287,52724699:34981404,47988412,267389
 (1,55:4736287,4736287:0,0,0
@@ -1466,8 +1466,8 @@ g1,55:35428922,52724699
 ]
 !34282
 }1
-Input:103:F:/zProgram/[L]博士工作/PRMLReadingNote/./Chapter3-Linear Model Regression.aux
-!99
+Input:103:F:/zProgram/PRMLReadingNote/./Chapter3-Linear Model Regression.aux
+!87
 Postamble:
 Count:1131
 !26
