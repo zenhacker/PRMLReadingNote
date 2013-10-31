@@ -7,8 +7,8 @@
 \usepackage[round, comma]{natbib}
 
 \begin{document}
-\NoteTitleName{Online Object Tracking: A Benchmark}\sepspace
-\MyBrief{{\Huge 本}文总结了这篇文章中关于Related Work部分的归类总结，以便以后参考。Object Tracking任务主要包括3个子任务：Target Representation Scheme (或Appearance Model)、Search Scheme、Model Update，下面就分别从这三个方面来总结各自的研究成果。}
+\NoteTitleName{Chapter 3: Linear Models for Regression }\sepspace
+%\MyBrief{{\Huge 本}文总结了这篇文章中关于Related Work部分的归类总结，以便以后参考。Object Tracking任务主要包括3个子任务：Target Representation Scheme (或Appearance Model)、Search Scheme、Model Update，下面就分别从这三个方面来总结各自的研究成果。}
 \sepspace
 
 
@@ -16,25 +16,37 @@
 \begin{compactitem}[\color{RoyalBlue}$\circ$]
 	\item 首先Linear Model的含义是模型对于未知参数是线性的，而不要求对input是否线性，事实上为了通常input都是经过非线性处理的。未知参数的线性形式为分析提供了方便，当然同时也一定程度上限定了模型的能力。最简单的一个线性模型就是Linear Regression，它对于input和未知参数都是线性的。
     \item \textbf{Linear Model}：
-    
+
     \qquad 给定一个含有$N$个数据的训练数据集$\{\mathbf{x}_n\}$（其中$n=1,...,N$），同时给定了训练数据的标签值$\{t_n\}$。
-    
-    \checkmark 问题定义\[ y(\mathbf{x}, \mathbf{w}) =    \
+
+    \checkmark \textcolor[rgb]{1.00,0.00,0.00}{问题定义}：\[ y(\mathbf{x}, \mathbf{w}) =    \
                                                 w_0 + \sum_{j=1}^{M-1} w_j \phi_j(\mathbf{x}) = \
-                                                \sum_{j=0}^{M-1} w_j \phi_j(\mathbf{x}) = \                                                
+                                                \sum_{j=0}^{M-1} w_j \phi_j(\mathbf{x}) = \
                                                 \mathbf{w}^T \phi(\mathbf{x}) \]
-    \qquad 其中M定义了模型的尺寸或者复杂度；$\phi_j(\mathbf{x}$称为\emph{basis functions}，一般是非线性的，可以看作是原始input的一种变换或者特征提取。
-    \qquad 还有一些常用的basis functions有：
-    \[
-    Gaussian Basis Function: \phi_j(\mathbf{x}) = \exp\{ -\frac{(x-\mu_j)^2}{2s^2} \} \\
-    
-    \]
-    
+    \qquad 其中M定义了模型的尺寸或者复杂度；$\phi_j(\mathbf{x})$称为\emph{basis functions}，一般是非线性的，可以看作是原始input的一种变换或者特征提取。
+
     \qquad Linear Regression中basis function选择的就是$\phi_j(\mathbf{x}) = x_j$；Polynomial Regression中选择的是$\phi_j(\mathbf{x}) = x^j$。
-    
-    \checkmark 
-    
-    
+
+    \qquad 还有一些常用的basis functions有：
+    \[ \mathrm{Gaussian\ Basis\ Function:} \phi_j(\mathbf{x}) = \exp\{ -\frac{(x-\mu_j)^2}{2s^2} \} \]
+    \[ \mathrm{Sigmodial\ Basis\ Function:} \phi_j(\mathbf{x}) = \sigma( \frac{x-\mu_j}{s} ) \]
+    此外，还有Fourier basis、wavelets正交基等。
+
+    \checkmark \textcolor[rgb]{1.00,0.00,0.00}{解决方案}：
+
+    $\bullet$ Least Squares最小二乘法：就是最小化sum-of-squares error function（均方误差），目标函数为：
+    \[ E_D(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^{N}\{t_n - \mathbf{w}^T \phi(\mathbf{x}_n)\} ^ 2 \]
+
+    $\bullet$ Maximum Likelihood Estimation (MLE)最大似然估计：假设一个Gaussian噪声$\epsilon$，即$t = y(\mathbf{x}, \mathbf{w}) + /epsilon$，则在训练数据样本i.d.d. 的前提下，对数似然为：
+    \[ \ln p(\mathbf{t} | \mathbf{X}, \mathbf{w}, \beta) = \sum_{n=1}^{N} \ln \mathcal{N}( t_n | \mathbf{w}^T \phi(\mathbf{x}_n), \beta^{-1} ) =\
+    \frac{N}{2} \ln \beta - \frac{N}{2} \ln (2 \pi) - \beta E_D(\mathbf{w})\]
+    其中的$ E_D(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^{N}\{t_n - \mathbf{w}^T \phi(\mathbf{x}_n)\} ^ 2 $就是最小二乘法的目标函数，二者最终殊途同归，即：
+    \textcolor[rgb]{0.00,0.07,1.00}{最小二乘法 $\Longleftrightarrow$ 高斯噪声假设下的MLE}。
+
+
+    通过令梯度为0可以得出参数$\mathbf{w}$的解：\[ \mathbf{w}_{ML} = (\Phi^T \Phi)^{-1} \Phi^T \mathbf{t} \]，其中$\Phi$
+
+
 \end{compactitem}
 
 
